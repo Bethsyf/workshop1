@@ -1,11 +1,10 @@
 div {
     width: auto;
-    padding: 0;    
+    padding: 30;    
     margin-top: 70px;
     margin-left: 50px;
     border: 1px solid;
-    display: inline-block;
-    cursor: pointer;
+    display: inline-block;    
 }
 
 h1{
@@ -29,6 +28,12 @@ img{
 .title{
     color: gray;
     text-align: center;
+}
+
+.title1{
+    color: gray;
+    text-align: center;
+    font-size: 25px;
 }
 
 .resul{
