@@ -10,15 +10,19 @@
 <body>
     <div >
         <h1>Calculadora IMC</h1>
-        <h4>Descubra su indice de masa corporal</h4>
+        <h4 class="title">Descubra su indice de masa corporal</h4>
         <ul>
-            <li>Sexo <button><img src="https://icones.pro/wp-content/uploads/2021/02/icone-png-symbole-masculin-gris.png" alt="masculino"></button> <button><img src="https://icones.pro/wp-content/uploads/2021/03/symbole-feminin-icone-grise.png" alt="femenino"></button></li>
-            <li>Edad <input type="text"></li>
-            <li>Peso <input type="text">KG</li>
-            <li>Altura <input type="text">M</li>
+            <li>Sexo <button><img src="https://icones.pro/wp-content/uploads/2021/02/icone-png-symbole-masculin-gris.png" alt="masculino"></button> 
+                <button><img src="https://icones.pro/wp-content/uploads/2021/03/symbole-feminin-icone-grise.png" alt="femenino"></button></li>
+            <li>Edad <input type="number" ></li>
+            <li>Peso <input id="kg" type="number">KG</li>
+            <li>Altura <input id="m" type="number">M</li>
         </ul>
-        <button class='boton'>CALCULAR IMC</button>
+        <button class='boton' id="calc">CALCULAR IMC</button>
     </div>
+    
+    <div class="title">Resultado <br><span class="resul" id="imc"></span></div><br>
+    <div class="title">categoria <br><span id="categ"></span></div>
+    
     <script src="./script.js"></script>
 </body>
-</html>
