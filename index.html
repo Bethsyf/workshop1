@@ -1,29 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="icon-imc.webp">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="./images/icon-imc.webp">
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Calculadora IMC</title>
 </head>
+
 <body>
-    <div >
-        <h1>Calculadora IMC</h1>
-        <h4 class="title">Descubra su indice de masa corporal</h4>
-        <ul>
-            <li>Sexo <button><img src="https://icones.pro/wp-content/uploads/2021/02/icone-png-symbole-masculin-gris.png" alt="masculino"></button> 
-                <button><img src="https://icones.pro/wp-content/uploads/2021/03/symbole-feminin-icone-grise.png" alt="femenino"></button></li>
-            <li>Edad <input type="number" ></li>
-            <li>Peso <input id="kg" type="number">KG</li>
-            <li>Altura <input id="m" type="number">M</li>
-        </ul>
-        <button class='boton' id="calc">CALCULAR IMC</button>
+    <div class="wrapper">
+        <div class="main-form">
+            <h1 class="title">Calculadora IMC</h1>
+            <h4 class="description">Descubra su indice de masa corporal</h4>
+            <div class="items">
+                <label for="">Sexo: </label>
+                <button id="man" class="sex">
+                    <span>
+                        <img src="https://icones.pro/wp-content/uploads/2021/02/icone-png-symbole-masculin-gris.png"
+                            alt="masculino">
+                    </span>
+                </button>
+                <button id="woman" class="sex">
+                    <span>
+                        <img src="https://icones.pro/wp-content/uploads/2021/03/symbole-feminin-icone-grise.png"
+                            alt="femenino">
+                    </span>
+                </button>
+            </div>
+            <div class="items">
+                <label for="edad">Edad</label>
+                <input id="edad" type="number" name="edad">
+            </div>
+            <div class="items">
+                <label for="peso">Peso</label>
+                <input id="peso" type="number" name="peso">
+                <span class="anthropometric">KG</span>
+            </div>
+            <div class="items">
+                <label for="altura">Altura</label>
+                <input id="altura" type="number" name="altura">
+                <span class="anthropometric">M</span>
+            </div>
+            <input class="btn-calcular" type="button" value="CALCULAR IMC" onclick="calcularImc()">
+        </div>
+        <div class="result">
+            <h2>Resultados</h2>
+            <div class="item-result">
+                <label for="sexo">Sexo:</label>
+                <p id="sexo">-</p>
+            </div>
+            <div class="item-result">
+                <label for="edad-result">Edad:</label>
+                <p id="edad-result">0 Años</p>
+            </div>
+            <div class="item-result">
+                <label for="peso-result">Peso:</label>
+                <p id="peso-result">0 Kg</p>
+            </div>
+            <div class="item-result">
+                <label for="altura-result">Altura:</label>
+                <p id="altura-result">0 Mts</p>
+            </div>
+            <div class="item-result">
+                <label id="imc-label" for="imc">IMC:</label>
+                <p id="imc">0,00</p>
+            </div>
+            <div class="item-result">
+                <p id="description-result"></p>
+            </div>
+            <div> 
+                <img src="./images/imc.jpg" alt="imc" width="500">
+            </div>
+        </div>
     </div>
-    
-    <div class="title1">Resultado <br><span class="resul" id="imc"></span></div>
-    <div class="title1">Categoria <br><span id="categ"></span></div>
-    
-    <script src="./script.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
+
+</html>
